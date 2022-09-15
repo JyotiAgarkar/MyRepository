@@ -41,29 +41,37 @@ public class WebTablePractice {
 	// driver.switchTo().defaultContent();
 	 
 	 Thread.sleep(2000);
-	 driver.findElement(By.xpath("//input[@placeholder='Type to search']")).sendKeys("Gaurang");
+	 driver.findElement(By.xpath("//input[@placeholder='Type to search']")).sendKeys("g");
 	 Thread.sleep(2000);
 	 driver.findElement(By.xpath("//div[@class='input-group-append']")).click();
 	 Thread.sleep(3000);
 	 
  List<WebElement> header = driver.findElements(By.xpath("//div[@class='rt-tr']/div"));
+ int columnSize=header.size();
+ System.out.println("Number of Column="+columnSize);
  System.out.println("***header of table****");
  for(WebElement temp:header)
   {
 	 System.out.print(temp.getText()+" | ");
   }
  
+ 
  System.out.println();
- System.out.println();
+ 
  System.out.println("***Table containt********");
- for(int i=1;i<=3;i++)
+ for(int i=1;i<=10;i++)
 	//div[@class='rt-tbody']/div[1]/div/div[1]
  {
-	 for(int j=1;j<=6;j++)
+	 for(int j=1;j<=columnSize;j++)
 	 {
 	WebElement text = driver.findElement(By.xpath("//div[@class='rt-tbody']/div["+i+"]/div/div["+j+"]"));
+	
 	 System.out.print(text.getText()+" | ");
+	
+	
 	 }System.out.println();
+	 
+	 
  }
  
  

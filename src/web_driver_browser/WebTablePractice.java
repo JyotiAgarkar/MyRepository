@@ -54,6 +54,7 @@ public class WebTablePractice {
   }
  
  System.out.println();
+ System.out.println();
  System.out.println("***Table containt********");
  for(int i=1;i<=3;i++)
 	//div[@class='rt-tbody']/div[1]/div/div[1]

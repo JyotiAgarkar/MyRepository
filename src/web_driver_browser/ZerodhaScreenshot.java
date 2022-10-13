@@ -11,10 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.annotations.Test;
 
 public class ZerodhaScreenshot {
 	
-
+     @Test
 	public static void main(String[] args) throws IOException {
 		
 		String key="webdriver.chrome.driver";
